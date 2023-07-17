@@ -39,7 +39,9 @@ s/bitcoin/polygon
 
 ## Todo:
 
-reference module to sign off on multisigs
+1. reference module to sign off on multisigs
+2. sample uis: notAirbnb, notUber
+3. zk tx
 
 Title: Bitcoin: Disrupting Web2 with Decentralized Trust and Empowering User Control
 Abstract: In this paper, we propose a revolutionary approach to disrupt Web2 systems, focusing on eliminating the need for middlemen while embracing the power of blockchain technology. By utilizing partially signed transactions on a given chain and providing liquidity in another chain, we aim to provide a seamless user experience while reducing fees associated with traditional Web2 platforms. Additionally, we introduce the concept of appointing third-party non-binding arbiters, empowering individuals to resolve disputes in a fair and transparent manner. The ultimate goal is to decentralize control, enhance efficiency, and revolutionize the way transactions and dispute resolution are conducted.
