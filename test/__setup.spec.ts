@@ -17,6 +17,8 @@ import {
   Events__factory,
   FeeCollectModule,
   FeeCollectModule__factory,
+  ReverseFeeCollectModule,
+  ReverseFeeCollectModule__factory,
   FeeFollowModule,
   FeeFollowModule__factory,
   FollowerOnlyReferenceModule,
@@ -111,6 +113,7 @@ export let collectNFTImpl: CollectNFT;
 
 // Collect
 export let feeCollectModule: FeeCollectModule;
+export let reverseFeeCollectModule: ReverseFeeCollectModule;
 export let timedFeeCollectModule: TimedFeeCollectModule;
 export let freeCollectModule: FreeCollectModule;
 export let revertCollectModule: RevertCollectModule;
@@ -219,6 +222,10 @@ before(async function () {
     lensHub.address,
     moduleGlobals.address
   );
+  reverseFeeCollectModule = await new ReverseFeeCollectModule__factory(deployer).deploy(
+    lensHub.address,
+    moduleGlobals.address
+  );
   timedFeeCollectModule = await new TimedFeeCollectModule__factory(deployer).deploy(
     lensHub.address,
     moduleGlobals.address
@@ -269,3 +276,4 @@ before(async function () {
   // Event library deployment is only needed for testing and is not reproduced in the live environment
   eventsLib = await new Events__factory(deployer).deploy();
 });
+
